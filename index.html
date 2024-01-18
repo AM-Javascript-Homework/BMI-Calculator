@@ -1,12 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Meta tags for character set and responsive design -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title of the web page -->
     <title>BMI Calculator</title>
+    <!-- Link to custom CSS file -->
     <link rel="stylesheet" href="style.css" />
+    <!-- Link to the Google Font file -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
   </head>
   <body>
+    <!-- Background layer for styling -->
+    <div id="backgroundLayer">
+      <!-- Container for the form -->
+      <div id="formContainer">
+        <!-- BMI Calculator Form -->
+        <div id="bmiForm">
+          <!-- Main heading -->
+          <h1>BMI Calculator</h1>
+          <!-- Input for Height with placeholder -->
+          <span>Height :</span>
+          <input type="number" placeholder="Enter Your Height..." />
+          <!-- Input for Weight with placeholder -->
+          <span>Weight :</span>
+          <input type="number" placeholder="Enter Your Weight..." />
+          <!-- Placeholder for displaying the result -->
+          <span>Result :</span>
+          <div id="returnAnswer"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Link to your JavaScript file -->
     <script src="javascript.js"></script>
   </body>
 </html>

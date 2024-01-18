@@ -1,0 +1,96 @@
+body {
+  /* Reset default margin and padding */
+  padding: 0%;
+  margin: 0%;
+  /* Use border-box to include padding and border in element's total width and height */
+  box-sizing: border-box;
+  /* Set font family for the entire document */
+  font-family: "Roboto", sans-serif;
+  /* Set background image with cover and blur effect */
+  background-image: url(Background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  backdrop-filter: blur(20px);
+}
+
+#backgroundLayer {
+  /* Semi-transparent background layer */
+  background-color: rgba(0, 0, 0, 0.522);
+}
+
+#formContainer {
+  /* Center the form vertically and horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#bmiForm {
+  /* Styling for the BMI form */
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(23, 23, 23, 0.522);
+  padding: 70px 70px;
+  border-radius: 15px;
+}
+
+#bmiForm h1 {
+  /* Styling for the main heading */
+  color: white;
+  margin: 0%;
+  margin-bottom: 60px;
+}
+
+#bmiForm span {
+  /* Styling for spans inside the form */
+  color: white;
+  font-size: 22px;
+  margin-bottom: 17px;
+  margin-top: 17px;
+  margin-left: 3px;
+}
+
+#bmiForm input {
+  /* Styling for input fields */
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  width: 96%;
+  height: 40px;
+  border-radius: 9px;
+  border: 1px solid rgb(58, 58, 58);
+  background-color: rgba(255, 255, 255, 0.189);
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+#bmiForm input:focus {
+  /* Styling for input fields when focused */
+  background-color: rgba(255, 255, 255, 0.312);
+  border: 1px solid rgb(58, 58, 58);
+  outline: 0px;
+  outline-offset: 0px;
+  transition: all 0.3s ease-in;
+}
+
+#bmiForm input::placeholder {
+  /* Styling for input placeholders */
+  text-indent: 20px;
+  color: rgba(255, 255, 255, 0.277);
+}
+
+#bmiForm input::-webkit-inner-spin-button {
+  /* Hide spin button in WebKit browsers */
+  display: none;
+}
+
+#returnAnswer {
+  /* Styling for the result display */
+  width: 96%;
+  height: 45px;
+  border: 1px solid rgb(58, 58, 58);
+  background-color: rgba(255, 255, 255, 0.189);
+  border-radius: 9px;
+  padding-left: 10px;
+}
