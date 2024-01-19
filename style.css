@@ -7,7 +7,7 @@ body {
   /* Set font family for the entire document */
   font-family: "Roboto", sans-serif;
   /* Set background image with cover and blur effect */
-  background-image: url(Background.jpg);
+  background-image: url(Background.png);
   background-repeat: no-repeat;
   background-size: cover;
   backdrop-filter: blur(20px);
@@ -56,19 +56,20 @@ body {
   /* Styling for input fields */
   font-size: 18px;
   color: rgb(255, 255, 255);
-  width: 96%;
-  height: 40px;
+  width: 100%;
+  height: 50px;
   border-radius: 9px;
-  border: 1px solid rgb(58, 58, 58);
+  border: 0px solid rgb(58, 58, 58);
   background-color: rgba(255, 255, 255, 0.189);
-  padding-left: 10px;
+  margin: 0px;
   margin-bottom: 20px;
+  padding: 0px;
+  text-indent: 20px;
 }
 
 #bmiForm input:focus {
   /* Styling for input fields when focused */
   background-color: rgba(255, 255, 255, 0.312);
-  border: 1px solid rgb(58, 58, 58);
   outline: 0px;
   outline-offset: 0px;
   transition: all 0.3s ease-in;
@@ -85,12 +86,49 @@ body {
   display: none;
 }
 
-#returnAnswer {
-  /* Styling for the result display */
-  width: 96%;
-  height: 45px;
-  border: 1px solid rgb(58, 58, 58);
+#BmiButtonContainer {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+
+.straightLine {
+  width: 100px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.189);
+}
+
+#bmiSubmitButton {
+  font-size: 25px;
+  cursor: pointer;
+  height: 50px;
+  color: white;
   background-color: rgba(255, 255, 255, 0.189);
   border-radius: 9px;
-  padding-left: 10px;
+  width: 30%;
+  border: 0px;
+}
+
+#bmiSubmitButton:hover {
+  background-color: rgba(255, 255, 255, 0.312);
+  transition: all 0.3s ease-in;
+}
+
+#bmiSubmitButton:active {
+  background-color: rgba(132, 255, 128, 0.453);
+
+  transition: all 0.04s ease-in;
+  box-shadow: none;
+}
+
+#returnAnswer {
+  /* Styling for the result display */
+  width: 100%;
+  height: 45px;
+  border: 0px solid rgb(58, 58, 58);
+  background-color: rgba(255, 255, 255, 0.189);
+  border-radius: 9px;
 }

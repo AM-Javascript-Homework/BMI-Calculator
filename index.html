@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="style.css" />
     <!-- Link to the Google Font file -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- Link to Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
   </head>
   <body>
     <!-- Background layer for styling -->
@@ -26,6 +31,11 @@
           <!-- Input for Weight with placeholder -->
           <span>Weight :</span>
           <input type="number" placeholder="Enter Your Weight..." />
+          <div id="BmiButtonContainer">
+            <div class="straightLine"></div>
+            <button id="bmiSubmitButton"><i class="bi bi-check-lg"></i></button>
+            <div class="straightLine"></div>
+          </div>
           <!-- Placeholder for displaying the result -->
           <span>Result :</span>
           <div id="returnAnswer"></div>
