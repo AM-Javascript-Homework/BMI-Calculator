@@ -27,10 +27,10 @@
           <h1>BMI Calculator</h1>
           <!-- Input for Height with placeholder -->
           <span>Height :</span>
-          <input type="number" placeholder="Enter Your Height..." />
+          <input id="Height" type="number" placeholder="Enter Your Height..." />
           <!-- Input for Weight with placeholder -->
           <span>Weight :</span>
-          <input type="number" placeholder="Enter Your Weight..." />
+          <input id="Weight" type="number" placeholder="Enter Your Weight..." />
           <div id="BmiButtonContainer">
             <div class="straightLine"></div>
             <button id="bmiSubmitButton"><i class="bi bi-check-lg"></i></button>
@@ -38,7 +38,8 @@
           </div>
           <!-- Placeholder for displaying the result -->
           <span>Result :</span>
-          <div id="returnAnswer"></div>
+          <div id="returnAnswer"><p id="result"></p></div>
+          <div id="returnOutput"><p id="resultOutput"></p></div>
         </div>
       </div>
     </div>
