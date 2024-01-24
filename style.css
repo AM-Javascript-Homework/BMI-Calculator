@@ -1,50 +1,47 @@
+/* Reset default margin and padding for the entire document */
 body {
-  /* Reset default margin and padding */
   padding: 0%;
   margin: 0%;
-  /* Use border-box to include padding and border in element's total width and height */
   box-sizing: border-box;
-  /* Set font family for the entire document */
   font-family: "Roboto", sans-serif;
-  /* Set background image with cover and blur effect */
   background-image: url(Background.png);
   background-repeat: no-repeat;
   background-size: cover;
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px); /* Blur effect for the background */
 }
 
+/* Semi-transparent background layer */
 #backgroundLayer {
-  /* Semi-transparent background layer */
   background-color: rgba(0, 0, 0, 0.522);
 }
 
+/* Center the form vertically and horizontally */
 #formContainer {
-  /* Center the form vertically and horizontally */
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 }
 
+/* Styling for the BMI form */
 #bmiForm {
-  /* Styling for the BMI form */
   width: 40%;
   display: flex;
   flex-direction: column;
   background-color: rgba(23, 23, 23, 0.522);
-  padding: 70px 70px;
+  padding: 70px 70px 50px 70px;
   border-radius: 15px;
 }
 
+/* Styling for the main heading */
 #bmiForm h1 {
-  /* Styling for the main heading */
   color: white;
   margin: 0%;
   margin-bottom: 60px;
 }
 
+/* Styling for spans inside the form */
 #bmiForm span {
-  /* Styling for spans inside the form */
   color: white;
   font-size: 22px;
   margin-bottom: 17px;
@@ -52,8 +49,8 @@ body {
   margin-left: 3px;
 }
 
+/* Styling for input fields */
 #bmiForm input {
-  /* Styling for input fields */
   font-size: 18px;
   color: rgb(255, 255, 255);
   width: 100%;
@@ -67,25 +64,26 @@ body {
   text-indent: 20px;
 }
 
+/* Styling for input fields when focused */
 #bmiForm input:focus {
-  /* Styling for input fields when focused */
   background-color: rgba(255, 255, 255, 0.312);
   outline: 0px;
   outline-offset: 0px;
   transition: all 0.3s ease-in;
 }
 
+/* Styling for input placeholders */
 #bmiForm input::placeholder {
-  /* Styling for input placeholders */
   text-indent: 20px;
   color: rgba(255, 255, 255, 0.277);
 }
 
+/* Hide spin button in WebKit browsers */
 #bmiForm input::-webkit-inner-spin-button {
-  /* Hide spin button in WebKit browsers */
   display: none;
 }
 
+/* Container for the submit button and related elements */
 #BmiButtonContainer {
   display: flex;
   justify-content: space-around;
@@ -95,12 +93,14 @@ body {
   margin-bottom: 25px;
 }
 
+/* Styling for the straight line elements */
 .straightLine {
   width: 100px;
   height: 4px;
   background-color: rgba(255, 255, 255, 0.189);
 }
 
+/* Styling for the submit button */
 #bmiSubmitButton {
   font-size: 25px;
   cursor: pointer;
@@ -112,31 +112,96 @@ body {
   border: 0px;
 }
 
+/* Hover effect for the submit button */
 #bmiSubmitButton:hover {
   background-color: rgba(255, 255, 255, 0.312);
   transition: all 0.3s ease-in;
 }
 
+/* Active state styling for the submit button */
 #bmiSubmitButton:active {
   background-color: rgba(25, 228, 18, 0.453);
-
   transition: all 0.04s ease-in;
   box-shadow: none;
 }
-  
-#returnAnswer, #returnOutput  {
-  /* Styling for the result display */
-  width: 100%;
+
+/* Result section styling */
+#resultSection {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease; /* Smooth transition for max-height */
+}
+
+/* Show result styling */
+#resultSection.show-result {
+  max-height: 500px;
+}
+
+/* Styling for secondary heading in the form */
+#bmiForm h2 {
+  color: white;
+  margin: 0%;
+  margin-bottom: 40px;
+}
+
+/* Container for return answer elements */
+#returnAnswerContainer {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+}
+
+/* Styling for return BMI element */
+#returnBmi {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 30%;
+  height: 45px;
+  border: 0px;
+  background-color: rgba(255, 255, 255, 0.189);
+  border-radius: 5px;
+}
+
+/* Styling for return output element */
+#returnOutput {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 30%;
   margin-bottom: 13px;
   height: 45px;
   border: 0px solid rgb(58, 58, 58);
   background-color: rgba(255, 255, 255, 0.189);
-  border-radius: 9px;
+  border-radius: 5px;
 }
-#result , #resultOutput {
+
+/* Styling for the result and result output elements */
+#result,
+#resultOutput {
   text-align: center;
   font-size: 20px;
-  
   color: white;
-  
+}
+
+/* Shake animation for inputs */
+@keyframes shake {
+  25%,
+  75% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+}
+
+/* Shake animation class */
+.shake {
+  animation: shake 0.2s ease-in-out;
 }
