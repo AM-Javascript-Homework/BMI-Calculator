@@ -25,27 +25,39 @@
         <div id="bmiForm">
           <!-- Main heading -->
           <h1>BMI Calculator</h1>
+          <!-- Gender selection section -->
+          <span>Gender :</span>
+          <div id="genderSelection">
+            <!-- Female radio button -->
+            <input type="radio" id="female" name="gender" />
+            <label for="female">Female</label>
+            <!-- Male radio button -->
+            <input type="radio" id="male" name="gender" />
+            <label for="male">Male</label>
+          </div>
           <!-- Input for Height with placeholder -->
           <span>Height :</span>
           <input id="Height" type="number" placeholder="Enter Your Height..." />
           <!-- Input for Weight with placeholder -->
           <span>Weight :</span>
           <input id="Weight" type="number" placeholder="Enter Your Weight..." />
-          
-          
+
+          <!-- BMI Button Container -->
           <div id="BmiButtonContainer">
             <div class="straightLine"></div>
+            <!-- BMI Submit Button -->
             <button id="bmiSubmitButton"><i class="bi bi-check-lg"></i></button>
             <div class="straightLine"></div>
           </div>
+
           <!-- Placeholder for displaying the result -->
           <div id="resultSection">
             <span>BMI Number :</span>
             <div id="returnBmi">
-              <p id="result"></p>
+              <p id="Bmiresult"></p>
             </div>
             <span>Health Condition :</span>
-            <div id="returnOutput"><p id="resultOutput"></p></div>
+            <div id="returnHealthiness"><p id="healthinessResult"></p></div>
           </div>
         </div>
       </div>
